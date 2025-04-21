@@ -6,10 +6,15 @@
 /*   By: jose-mim <jose-mim@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 20:32:42 by jose-mim          #+#    #+#             */
-/*   Updated: 2025/04/21 20:34:06 by jose-mim         ###   ########.fr       */
+/*   Updated: 2025/04/21 22:16:41 by jose-mim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int main() {
-    
+int	isalpha(int alphabet)
+{
+	if ((alphabet >= 'A' && alphabet <= 'Z') || (alphabet >= 'a'
+			&& alphabet <= 'z'))
+		return (1);
+	else
+		return (0);
 }
