@@ -6,11 +6,11 @@
 /*   By: jose-mim <jose-mim@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 18:55:32 by jose-mim          #+#    #+#             */
-/*   Updated: 2025/04/24 19:11:10 by jose-mim         ###   ########.fr       */
+/*   Updated: 2025/05/05 19:53:13 by jose-mim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	isdigit(int digit)
+int	ft_isdigit(int digit)
 {
 	if (digit >= '0' && digit <= '9')
 		return (1);
