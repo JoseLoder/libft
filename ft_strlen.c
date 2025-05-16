@@ -6,11 +6,13 @@
 /*   By: jose-mim <jose-mim@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 19:17:24 by jose-mim          #+#    #+#             */
-/*   Updated: 2025/04/24 19:22:12 by jose-mim         ###   ########.fr       */
+/*   Updated: 2025/05/16 21:20:55 by jose-mim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(const char *str)
+#include <string.h>
+
+size_t	ft_strlen(const char *str)
 {
 	int i;
 
