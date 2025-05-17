@@ -6,16 +6,16 @@
 /*   By: jose-mim <jose-mim@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 19:23:04 by jose-mim          #+#    #+#             */
-/*   Updated: 2025/04/26 12:49:20 by jose-mim         ###   ########.fr       */
+/*   Updated: 2025/05/17 19:32:51 by jose-mim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-int	*ft_memset(void *b, int c, size_t len)
+void	*ft_memset(void *b, int c, size_t len)
 {
-	unsigned char *ptr;
-	size_t i;
+	unsigned char	*ptr;
+	size_t			i;
 
 	ptr = (unsigned char *)b;
 	i = 0;

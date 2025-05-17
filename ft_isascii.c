@@ -6,11 +6,11 @@
 /*   By: jose-mim <jose-mim@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 19:08:26 by jose-mim          #+#    #+#             */
-/*   Updated: 2025/04/24 19:11:10 by jose-mim         ###   ########.fr       */
+/*   Updated: 2025/05/17 19:28:43 by jose-mim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	isascii(int ascii)
+int	ft_isascii(int ascii)
 {
 	if (ascii >= 0 && ascii <= 127)
 		return (1);

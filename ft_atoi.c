@@ -6,7 +6,7 @@
 /*   By: jose-mim <jose-mim@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/05 18:57:45 by jose-mim          #+#    #+#             */
-/*   Updated: 2025/05/16 20:48:01 by jose-mim         ###   ########.fr       */
+/*   Updated: 2025/05/17 19:36:59 by jose-mim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	ft_atoi(const char *str)
 	}
 	while (str[i])
 	{
-		if (str[i] >= '0' && str[i] <= '9' || (str[i] == '-' && j == 0))
+		if ((str[i] >= '0' && str[i] <= '9') || (str[i] == '-' && j == 0))
 		{
 			if (str[i] == '-')
 			{
@@ -39,7 +39,10 @@ int	ft_atoi(const char *str)
 				if (result > (2147483647 / 10) || (result == (2147483647 / 10)
 						&& (str[i] - '0') > 7))
 				{
-					return ((sign == 1) ? 2147483647 : -2147483648);
+					if (sign == 1)
+						return (2147483647);
+					else
+						return (-2147483648);
 				}
 				result = result * 10 + (str[i] - '0');
 			}

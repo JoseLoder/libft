@@ -6,12 +6,12 @@
 /*   By: jose-mim <jose-mim@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 21:03:49 by jose-mim          #+#    #+#             */
-/*   Updated: 2025/05/16 21:53:19 by jose-mim         ###   ########.fr       */
+/*   Updated: 2025/05/17 18:27:42 by jose-mim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdlib.h>
-#include <string.h>
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -22,10 +22,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	{
 		return (NULL);
 	}
-	slen = strlen(s);
+	slen = ft_strlen(s);
 	if (start >= slen)
 	{
-		return (strdup(""));
+		return (NULL);
 	}
 	if (start + len > slen)
 	{
@@ -36,7 +36,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	{
 		return (NULL);
 	}
-	strncpy(sub, s + start, len);
+	ft_strlcpy(sub, s + start, len);
 	sub[len] = '\0';
 	return (sub);
 }

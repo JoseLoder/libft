@@ -6,16 +6,16 @@
 /*   By: jose-mim <jose-mim@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 19:34:55 by jose-mim          #+#    #+#             */
-/*   Updated: 2025/04/30 19:46:58 by jose-mim         ###   ########.fr       */
+/*   Updated: 2025/05/17 19:31:34 by jose-mim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *p, int c, size_t n)
 {
-	unsigned char *ptr;
-	size_t i;
+	unsigned char	*ptr;
+	size_t			i;
 
 	ptr = (unsigned char *)p;
 	i = 0;

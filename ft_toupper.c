@@ -6,11 +6,11 @@
 /*   By: jose-mim <jose-mim@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 16:40:26 by jose-mim          #+#    #+#             */
-/*   Updated: 2025/04/30 16:50:51 by jose-mim         ###   ########.fr       */
+/*   Updated: 2025/05/17 19:30:48 by jose-mim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c);
+#include "libft.h"
 
 int	ft_toupper(int c)
 {

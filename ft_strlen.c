@@ -6,15 +6,15 @@
 /*   By: jose-mim <jose-mim@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 19:17:24 by jose-mim          #+#    #+#             */
-/*   Updated: 2025/05/16 21:20:55 by jose-mim         ###   ########.fr       */
+/*   Updated: 2025/05/17 19:29:19 by jose-mim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str[i] != '\0')

@@ -6,24 +6,18 @@
 /*   By: jose-mim <jose-mim@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 20:56:39 by jose-mim          #+#    #+#             */
-/*   Updated: 2025/05/16 21:02:05 by jose-mim         ###   ########.fr       */
+/*   Updated: 2025/05/17 18:25:00 by jose-mim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdlib.h>
-
-int		ft_strlen(const char *str);
-void	*ft_memcpy(void *dest, const void *src, size_t n);
 
 char	*ft_strdup(const char *s1)
 {
 	size_t	len;
 	char	*new_string;
 
-	if (s1 == NULL)
-	{
-		return (NULL);
-	}
 	len = ft_strlen(s1) + 1;
 	new_string = (char *)malloc(len);
 	if (new_string == NULL)

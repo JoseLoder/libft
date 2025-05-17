@@ -6,11 +6,11 @@
 /*   By: jose-mim <jose-mim@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 19:14:35 by jose-mim          #+#    #+#             */
-/*   Updated: 2025/04/24 19:16:23 by jose-mim         ###   ########.fr       */
+/*   Updated: 2025/05/17 19:28:50 by jose-mim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	isprint(int printable)
+int	ft_isprint(int printable)
 {
 	if (printable >= 32 && printable <= 126)
 		return (1);

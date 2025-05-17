@@ -1,12 +1,12 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    makefile                                           :+:      :+:    :+:    #
+#    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: jose-mim <jose-mim@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/17 17:05:55 by jose-mim          #+#    #+#              #
-#    Updated: 2025/05/17 17:06:11 by jose-mim         ###   ########.fr        #
+#    Updated: 2025/05/17 17:57:45 by jose-mim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,15 +43,7 @@ SRCS = ft_isalpha.c \
        ft_substr.c \
        ft_strjoin.c \
        ft_strtrim.c \
-       ft_split.c \
-       ft_itoa.c \
-       ft_strmapi.c \
-       ft_striteri.c \
-       ft_putnbr_fd.c \
-       ft_putchar_fd.c \
-       ft_putstr_fd.c \
-       ft_putendl_fd.c \
-
+      
 # Object files
 OBJS = $(SRCS:.c=.o)
 

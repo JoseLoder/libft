@@ -6,18 +6,17 @@
 /*   By: jose-mim <jose-mim@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 18:36:01 by jose-mim          #+#    #+#             */
-/*   Updated: 2025/04/30 19:24:42 by jose-mim         ###   ########.fr       */
+/*   Updated: 2025/05/17 19:31:24 by jose-mim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 int	ft_strncmp(const char *str1, const char *str2, size_t n)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
-
 	if (n == 0)
 	{
 		return (0);

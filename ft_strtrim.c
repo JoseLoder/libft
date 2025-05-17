@@ -6,14 +6,12 @@
 /*   By: jose-mim <jose-mim@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/17 12:15:28 by jose-mim          #+#    #+#             */
-/*   Updated: 2025/05/17 14:20:38 by jose-mim         ###   ########.fr       */
+/*   Updated: 2025/05/17 19:37:34 by jose-mim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdlib.h>
-
-size_t		ft_strlen(const char *str);
-size_t		ft_strlcpy(char *dst, const char *src, size_t size);
 
 static int	is_in_set(char c, const char *set)
 {
@@ -53,8 +51,21 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ft_strlcpy(buffer, s1 + start, end - start + 1);
 	return (buffer);
 }
+
 /**
-str[' '(0),' '(1),' '(2),'H'(3),'O'(4),'L'(5),'A'(6),' '(7),' '(8),' '(9),' '(10)]
+str[
+	' '(0),
+	' '(1),
+	' '(2),
+	'H'(3),
+	'O'(4),
+	'L'(5),
+	'A'(6),
+	' '(7),
+	' '(8),
+	' '(9),
+	' '(10)
+]
 start in str[3]
 end in str[6]
 6 - 3 => str[3] => 4 characters
