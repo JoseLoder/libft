@@ -6,7 +6,7 @@
 /*   By: jose-mim <jose-mim@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 18:36:01 by jose-mim          #+#    #+#             */
-/*   Updated: 2025/05/17 19:31:24 by jose-mim         ###   ########.fr       */
+/*   Updated: 2025/05/17 21:07:54 by jose-mim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_strncmp(const char *str1, const char *str2, size_t n)
 	{
 		return (0);
 	}
-	while (i < n && (str1[i] != '\0' && str2[i] != '\0'))
+	while (i < n && (str1[i] != '\0' || str2[i] != '\0'))
 	{
 		if (str1[i] != str2[i])
 		{

@@ -6,7 +6,7 @@
 /*   By: jose-mim <jose-mim@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 17:25:28 by jose-mim          #+#    #+#             */
-/*   Updated: 2025/05/17 19:34:08 by jose-mim         ###   ########.fr       */
+/*   Updated: 2025/05/17 20:48:39 by jose-mim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,20 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	unsigned char	character;
-	unsigned char	*last_ptr;
+	char	*last_ptr;
 
 	last_ptr = NULL;
-	character = (unsigned char)c;
 	while (*s)
 	{
-		if (*s == character)
+		if (*s == (char)c)
 		{
-			last_ptr = ((unsigned char *)s);
+			last_ptr = ((char *)s);
 		}
 		s++;
 	}
-	if (character)
+	if ((char)c == '\0')
 	{
-		return ((char *)s);
+		return (char *)(s);
 	}
-	return ((char *)(last_ptr));
+	return (last_ptr);
 }

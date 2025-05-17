@@ -6,7 +6,7 @@
 /*   By: jose-mim <jose-mim@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 14:37:58 by jose-mim          #+#    #+#             */
-/*   Updated: 2025/05/17 19:58:19 by jose-mim         ###   ########.fr       */
+/*   Updated: 2025/05/17 20:33:59 by jose-mim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ static void	invert_move(void *dest, const void *src, size_t n)
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	if (!dest || !src)
+	if (!dest && !src)
 		return (NULL);
 	if (dest > src && dest < src + n)
 	{
