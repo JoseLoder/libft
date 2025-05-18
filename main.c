@@ -1,33 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jose-mim <jose-mim@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/26 17:14:16 by jose-mim          #+#    #+#             */
-/*   Updated: 2025/05/18 20:36:48 by jose-mim         ###   ########.fr       */
+/*   Created: 2025/05/18 16:24:54 by jose-mim          #+#    #+#             */
+/*   Updated: 2025/05/18 16:28:24 by jose-mim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+int	main(void)
 {
-	size_t	src_len;
-	size_t	i;
+	char *str = "Hola mundo !";
+	char **split = ft_split(str, ' ');
+	int i = 0;
 
-	src_len = ft_strlen(src);
-	if (size == 0)
+	while (split[i])
 	{
-		return (src_len);
-	}
-	i = 0;
-	while (i < size - 1 && src[i] != '\0')
-	{
-		dst[i] = src[i];
+		printf("%s\n", split[i]);
 		i++;
 	}
-	dst[i] = '\0';
-	return (src_len);
+	return (0);
 }

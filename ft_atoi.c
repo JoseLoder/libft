@@ -6,21 +6,19 @@
 /*   By: jose-mim <jose-mim@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/05 18:57:45 by jose-mim          #+#    #+#             */
-/*   Updated: 2025/05/18 13:15:41 by jose-mim         ###   ########.fr       */
+/*   Updated: 2025/05/18 20:35:46 by jose-mim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_atoi(const char *str)
 {
-	int result;
-	int sign;
-	int i;
-	int j;
+	int	result;
+	int	sign;
+	int	i;
 
 	result = 0;
 	sign = 1;
 	i = 0;
-	j = 0;
 	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' || str[i] == '\r'
 		|| str[i] == '\v' || str[i] == '\f')
 		i++;

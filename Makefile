@@ -6,7 +6,7 @@
 #    By: jose-mim <jose-mim@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/17 17:05:55 by jose-mim          #+#    #+#              #
-#    Updated: 2025/05/17 17:57:45 by jose-mim         ###   ########.fr        #
+#    Updated: 2025/05/18 18:20:14 by jose-mim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,6 +14,11 @@ NAME = libft.a
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
+
+ifdef DEBUG
+    CFLAGS += -g
+endif
+
 AR = ar rcs
 RM = rm -f
 
@@ -43,6 +48,7 @@ SRCS = ft_isalpha.c \
        ft_substr.c \
        ft_strjoin.c \
        ft_strtrim.c \
+       ft_split.c \
       
 # Object files
 OBJS = $(SRCS:.c=.o)
