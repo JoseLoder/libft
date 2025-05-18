@@ -6,7 +6,7 @@
 /*   By: jose-mim <jose-mim@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/05 18:20:01 by jose-mim          #+#    #+#             */
-/*   Updated: 2025/05/17 21:41:09 by jose-mim         ###   ########.fr       */
+/*   Updated: 2025/05/18 12:54:28 by jose-mim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,26 +16,19 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
 	size_t	j;
-	size_t	index;
 
 	i = 0;
 	j = 0;
-	index = 0;
-	while (i < len && big[i] != '\0')
+	if (little[j] == '\0')
+		return ((char *)big);
+	while ((i < len) && (big[i] != '\0'))
 	{
-		if (little[j] == '\0')
-		{
-			index = i - j;
-			return ((char *)big + index);
-		}
-		if (big[i] == little[j])
+		j = 0;
+		while ((big[i + j] == little[j]) && (len > (i + j)))
 		{
 			j++;
-		}
-		else
-		{
-			i -= j;
-			j = 0;
+			if (little[j] == '\0')
+				return ((char *)big + i);
 		}
 		i++;
 	}
