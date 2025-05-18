@@ -6,7 +6,7 @@
 /*   By: jose-mim <jose-mim@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/17 12:15:28 by jose-mim          #+#    #+#             */
-/*   Updated: 2025/05/17 19:37:34 by jose-mim         ###   ########.fr       */
+/*   Updated: 2025/05/18 15:41:00 by jose-mim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,21 +31,17 @@ char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	start;
 	size_t	end;
-	size_t	s1_len;
 	char	*buffer;
 
 	if (!s1 || !set)
 		return (NULL);
-	s1_len = ft_strlen(s1);
 	start = 0;
 	while (s1[start] && is_in_set(s1[start], set))
 		start++;
-	if (start == s1_len)
-		return ((char *)malloc(1));
-	end = s1_len;
+	end = ft_strlen(s1);
 	while (end > start && is_in_set(s1[end - 1], set))
 		end--;
-	buffer = (char *)malloc(end - start + 1);
+	buffer = (char *)malloc(sizeof(char) * (end - start + 1));
 	if (!buffer)
 		return (NULL);
 	ft_strlcpy(buffer, s1 + start, end - start + 1);
