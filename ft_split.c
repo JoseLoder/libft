@@ -6,7 +6,7 @@
 /*   By: jose-mim <jose-mim@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/18 16:09:11 by jose-mim          #+#    #+#             */
-/*   Updated: 2025/05/18 19:15:28 by jose-mim         ###   ########.fr       */
+/*   Updated: 2025/05/18 20:50:14 by jose-mim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,21 +17,27 @@ char	**ft_split(char const *s, char c)
 {
 	size_t i;
 	size_t j;
+	int sentinel;
 	char **split;
 	size_t total_court;
 	size_t court;
 
 	i = 0;
+	sentinel = 0;
 	j = 0;
 	total_court = 0;
-	if (c == '\0')
-	{
-	}
+	if (!s)
+		return (NULL);
 	while (s[i])
 	{
-		if (s[i] == c)
+		if (s[i] != c && !sentinel)
 		{
+			sentinel = 1;
 			total_court++;
+		}
+		else if (s[i] == c)
+		{
+			sentinel = 0;
 		}
 		i++;
 	}
