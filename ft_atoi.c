@@ -6,16 +6,16 @@
 /*   By: jose-mim <jose-mim@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/05 18:57:45 by jose-mim          #+#    #+#             */
-/*   Updated: 2025/05/17 19:36:59 by jose-mim         ###   ########.fr       */
+/*   Updated: 2025/05/18 13:15:41 by jose-mim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_atoi(const char *str)
 {
-	int	result;
-	int	sign;
-	int	i;
-	int	j;
+	int result;
+	int sign;
+	int i;
+	int j;
 
 	result = 0;
 	sign = 1;
@@ -23,35 +23,16 @@ int	ft_atoi(const char *str)
 	j = 0;
 	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' || str[i] == '\r'
 		|| str[i] == '\v' || str[i] == '\f')
+		i++;
+	if (str[i] == '+' || str[i] == '-')
 	{
+		if (str[i] == '-')
+			sign = -1;
 		i++;
 	}
-	while (str[i])
+	while (str[i] >= '0' && str[i] <= '9')
 	{
-		if ((str[i] >= '0' && str[i] <= '9') || (str[i] == '-' && j == 0))
-		{
-			if (str[i] == '-')
-			{
-				sign = -1;
-			}
-			else
-			{
-				if (result > (2147483647 / 10) || (result == (2147483647 / 10)
-						&& (str[i] - '0') > 7))
-				{
-					if (sign == 1)
-						return (2147483647);
-					else
-						return (-2147483648);
-				}
-				result = result * 10 + (str[i] - '0');
-			}
-			j++;
-		}
-		else if (j > 0)
-		{
-			return (result * sign);
-		}
+		result = result * 10 + (str[i] - '0');
 		i++;
 	}
 	return (result * sign);
